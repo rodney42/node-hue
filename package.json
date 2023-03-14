@@ -1,7 +1,7 @@
 {
-  "name": "huenode",
+  "name": "node-hue",
   "version": "1.0.0",
-  "description": "Phillips hue api wrapper",
+  "description": "Phillips hue api wrapper for clip V2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,14 @@
     "node",
     "api"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Rodney42",
+  "license": "MIT",
   "dependencies": {
     "hue-push-client": "^1.0.5",
     "simple-get": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodney42/node-hue.git"
   }
 }

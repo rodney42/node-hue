@@ -1,6 +1,6 @@
 # Huenode
 
-A minimalist approch to wrap the hue clip v2 api using javascript. There are no model objects and helper methods. The result of the calls are provided as they are returned by the hue bridge. The API methods return promises and can be used together with `await`.
+A minimalist pure javascript approch to wrap the hue clip v2 api using javascript. There are no model objects and helper methods. The result of the calls are provided as they are returned by the hue bridge. The API methods return promises and can be used together with `await`.
 
 ## Getting started
 
@@ -11,7 +11,7 @@ Automatic discovery using mDNS is not supported. You need to know your hue bridg
 
 This example lists all lights with their ID and ui name.
 
-    const hueApi = require('huenode');
+    const hueApi = require('node-hue');
     run = async () => {
         const hue = hueApi.connect();
         let lights = await hue.getLights();
@@ -35,7 +35,7 @@ The library [hue-push-client](https://www.npmjs.com/package/hue-push-client?acti
 
 This example lists endlessly for events emitted by the hue bridge.
 
-    const hueApi = require('huenode');
+    const hueApi = require('node-hue');
     run = async () => {
         const listener = (event) => {
             console.log(JSON.stringify(event,1,1));

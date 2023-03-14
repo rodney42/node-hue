@@ -59,7 +59,7 @@ The `connect` method accepts these options.
 | eventListener | The event listener callback. A method with one parameter for the data.|
 
 
-## Environemnt variables
+## Environment variables
 
 | Environment variable | Description | Default |
 | -------------------- | ----------- | ------- |

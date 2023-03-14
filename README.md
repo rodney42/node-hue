@@ -1,10 +1,10 @@
-# Huenode
+# Node-hue
 
 A minimalist approch to wrap the hue clip v2 api using pure javascript. There are no model objects and helper methods. The result of the calls are provided as they are returned by the hue bridge. The API methods return promises and can be used together with `await`.
 
 ## Getting started
 
-A hue user key is needed to access the bridge. This key can be obtained by following the advice here : (https://developers.meethue.com/develop/get-started-2/).
+A hue user key is needed to access the bridge. This key can be obtained by following the advice [here](https://developers.meethue.com/develop/get-started-2/).
 Automatic discovery using mDNS is not supported. You need to know your hue bridge IP or have a valid host dns entry.
 
 ### Example: List all lights 
@@ -50,13 +50,13 @@ More examples can be found in the examples folder.
 
 ## API connect options
 
-On the `connect` methods, these options are possible.
+The `connect` method accepts these options.
 
 | Property      | Description |
 | ------------- | ----------- |
-| host          | Hostname or address of you hue bridge. Can also be set by the enviroment variable `HUE_HOST` and defaults to `hue` |
+| host          | Hostname or address of you hue bridge. Can also be set by the enviroment variable `HUE_HOST` and defaults to `hue`. |
 | key           | API access key. Can also be set by the enviroment variable `HUE_KEY`. |
-| eventListener | The event listener callback.|
+| eventListener | The event listener callback. A method with one parameter for the data.|
 
 
 ## Environemnt variables
@@ -64,7 +64,7 @@ On the `connect` methods, these options are possible.
 | Environment variable | Description | Default |
 | -------------------- | ----------- | ------- |
 | HUE_HOST             | Hostname or address of you hue bridge. | hue |
-| HUE_KEY              | API access key | |
+| HUE_KEY              | API access key. | |
 | LOG_LEVEL            | Log level : TRACE,DEBUG,INFO,WARN,ERROR | INFO|
 
 ## API reference

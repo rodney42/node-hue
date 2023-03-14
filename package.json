@@ -1,0 +1,20 @@
+{
+  "name": "huenode",
+  "version": "1.0.0",
+  "description": "Phillips hue api wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hue",
+    "node",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hue-push-client": "^1.0.5",
+    "simple-get": "^4.0.1"
+  }
+}

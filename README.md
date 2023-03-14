@@ -1,6 +1,6 @@
 # Huenode
 
-A minimalist pure javascript approch to wrap the hue clip v2 api using javascript. There are no model objects and helper methods. The result of the calls are provided as they are returned by the hue bridge. The API methods return promises and can be used together with `await`.
+A minimalist approch to wrap the hue clip v2 api using pure javascript. There are no model objects and helper methods. The result of the calls are provided as they are returned by the hue bridge. The API methods return promises and can be used together with `await`.
 
 ## Getting started
 
@@ -171,3 +171,8 @@ This API reference is generated from the list of supported resources provided by
 | close() | Closes the hue connection. Removes a eventually registered event listener.|||
 | getDocumentation() | Returns this API documentation as markdown.|||
 --------------------------------
+
+## Motivation
+
+There are tons of hue api libraries around for the usage with node.js. But most provide just a subset of the available features or are based on the v1 api. They are often written in typescript and using data models. May be convenient in the usage, but missing flexibility. This library is handling the http request/response while keeping the original response value and without wrapping or changing the json data expected by the hue bridge. The dependency list should be short.
+For a home automation service I need fast access to buttons, temperature sensors, motion sensors, lights together with the possibility to get push events from the bridge. I didn't found it in the existing libraries - so this one was born.

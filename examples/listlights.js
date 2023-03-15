@@ -3,7 +3,7 @@
  * 
  * Lists all light IDs and names.
  */
-const hueApi = require('../index.js'); // Change to require('huenode') if running outside the examples folder
+const hueApi = require('../index.js'); // Change to require('node-hue') if running outside the examples folder
 
 run = async () => {
     const hue = hueApi.connect();

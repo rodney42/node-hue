@@ -2,7 +2,7 @@
  * Example for getting push notifications.
  * List all events emitted by the hue bridge for one minute and closes.
  */
-const hueApi = require('../index.js'); // Change to require('huenode') if running outside the examples folder
+const hueApi = require('../index.js'); // Change to require('node-hue') if running outside the examples folder
 
 // Helper function
 const fix = (val, expected, fillup=' ') => {

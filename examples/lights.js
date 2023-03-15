@@ -3,7 +3,7 @@
  * 
  * Expectes a light name and toggles the light on or off. If the light is not found by name, the available lights are displayed.
  */
-const hueApi = require('../index.js'); // Change to require('huenode') if running outside the examples folder
+const hueApi = require('../index.js'); // Change to require('node-hue') if running outside the examples folder
 
 run = async () => {
     if( process.argv.length<=2 ) {

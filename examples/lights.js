@@ -20,18 +20,24 @@ run = async () => {
     let names=[];
     //Uncomment to see all lights
     //console.log(JSON.stringify(lights,1,1));
-    lights.forEach(light => {
+    for(l=0; l<lights.length; l++ ) {
+        let light = lights[l];
         names.push(light.metadata.name);
         if( lightname == light.metadata.name ) {
             found = true;
-            hue.setLight(light.id, {
-                on: {
-                    on : !light.on.on
-                }
-            });
-            console.log("Light with name "+lightname+" toggled to state "+(!light.on.on?'on':'off'));
+            try {
+                let ok = await hue.setLight(light.id, {
+                    on: {
+                        on : !light.on.on
+                    }
+                });
+                console.log("Light with name "+lightname+" toggled to state "+(!light.on.on?'on':'off'));
+            } catch (e) {
+                console.log("Err "+e);
+            }
+            
         }
-    });
+    };
     
     if( !found ) {
         console.log("Light with name "+lightname+" not found. Available lights: "+JSON.stringify(names));

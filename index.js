@@ -67,7 +67,7 @@ module.exports.connect = (opt) => {
         host : (opt?opt.host:null) || process.env.HUE_HOST || 'hue',
         eventListener : (opt?opt.eventListener:null)
     };
-    const log = (opt.log ? opt.log : require('./lib/log.js') );
+    const log = ((opt&&opt.log) ? opt.log : require('./lib/log.js') );
 
     if( !context.key ) {
         throw new Error("The required hue API key is not provided. You may use the environemnt variable HUE_KEY to set one.")

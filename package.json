@@ -1,6 +1,6 @@
 {
   "name": "node-hue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Phillips hue api wrapper for clip V2",
   "main": "index.js",
   "scripts": {

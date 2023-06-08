@@ -2,7 +2,6 @@
  * Hue API wrapper
  */
 const http = require('./lib/http.js');
-const log = require('./lib/log.js');
 const huePushClient = require('hue-push-client');
 
 // Definition of the resources available by the hue v2 clip api
@@ -68,6 +67,8 @@ module.exports.connect = (opt) => {
         host : (opt?opt.host:null) || process.env.HUE_HOST || 'hue',
         eventListener : (opt?opt.eventListener:null)
     };
+    const log = (opt.log ? opt.log : require('./lib/log.js') );
+
     if( !context.key ) {
         throw new Error("The required hue API key is not provided. You may use the environemnt variable HUE_KEY to set one.")
     }
@@ -109,7 +110,9 @@ module.exports.connect = (opt) => {
         });
     }
 
-    let hue = {};
+    let hue = {
+        log : log
+    };
 
     // Creating resource acccess methods
     resources.forEach( resource => {

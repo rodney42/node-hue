@@ -57,7 +57,7 @@ The `connect` method accepts these options.
 | host          | Hostname or address of you hue bridge. Can also be set by the enviroment variable `HUE_HOST` and defaults to `hue`. |
 | key           | API access key. Can also be set by the enviroment variable `HUE_KEY`. |
 | eventListener | The event listener callback. A method with one parameter for the data.|
-
+| log           | A custom log implementation, that provides the functions `trace`, `debug`, `info`, `warn` and `error`. |
 
 ## Environment variables
 
